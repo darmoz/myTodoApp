@@ -2,14 +2,12 @@ package com.todos.todo.task.domain;
 
 import com.todos.todo.note.domain.Note;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Getter
-@Setter
 public class Task {
 
     @Id
@@ -27,4 +25,10 @@ public class Task {
     private TaskStatus taskStatus;
     private Integer daysAssigned;
 
+
+    public void updateTaskStatus(TaskStatus status) {
+        this.taskStatus = status;
+    }
 }
+
+

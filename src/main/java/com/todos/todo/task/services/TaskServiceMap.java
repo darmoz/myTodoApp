@@ -50,7 +50,7 @@ public class TaskServiceMap implements TaskService {
     public void changeTaskType(Long id, TaskStatus status) {
         Task task = taskRepository.findById(id).orElse(null);
         if (task != null) {
-            task.setTaskStatus(status);
+            task.updateTaskStatus(status);
             taskRepository.save(task);
         }
     }
