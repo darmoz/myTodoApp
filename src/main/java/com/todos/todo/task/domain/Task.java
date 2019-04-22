@@ -26,4 +26,5 @@ public class Task {
     @Enumerated(value = EnumType.STRING)
     private TaskStatus status;
     private Integer daysAssigned;
+
 }
